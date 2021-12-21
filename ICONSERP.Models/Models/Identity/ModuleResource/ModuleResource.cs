@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using ICONSERP.Models.BaseModel;
+ 
 using ICONSERP.Models.Models.Identity;
 
-namespace ICONSERPAPI.Models.Models.Identity
+namespace ICONSERP.Models.Models.Identity
 {
     [Table("ModuleResource", Schema = "Identity")]
 

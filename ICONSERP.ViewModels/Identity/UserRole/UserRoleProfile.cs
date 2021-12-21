@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using ICONSERP.Models;
-using ICONSERPAPI.Models.Models.Identity;
+using ICONSERP.Models.Models.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;

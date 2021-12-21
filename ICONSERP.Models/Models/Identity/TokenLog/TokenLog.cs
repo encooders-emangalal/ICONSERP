@@ -1,8 +1,8 @@
-﻿using ICONSERP.Models.BaseModel;
-using ICONSERPAPI.Models.Identity;
+﻿ 
+using ICONSERP.Models.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ICONSERPAPI.Models.Models.Identity
+namespace ICONSERP.Models.Models.Identity
 {
     [Table("TokenLog", Schema = "Identity")]
 

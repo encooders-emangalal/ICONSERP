@@ -1,9 +1,9 @@
-﻿using ICONSERP.Models.BaseModel;
-using ICONSERPAPI.Models.Models.Shared;
+﻿ 
+using ICONSERP.Models.Models.Shared;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ICONSERPAPI.Models.Models.Identity
+namespace ICONSERP.Models.Models.Identity
 {
     [Table("User", Schema = "Identity")]
 

@@ -1,5 +1,5 @@
 ﻿
-using ICONSERPAPI.Models.Identity;
+using ICONSERP.Models.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

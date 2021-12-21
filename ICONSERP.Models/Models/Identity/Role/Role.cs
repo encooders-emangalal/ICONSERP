@@ -1,10 +1,10 @@
-﻿using ICONSERP.Models.BaseModel;
+﻿ 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace ICONSERPAPI.Models.Models.Identity
+namespace ICONSERP.Models.Models.Identity
 {
     [Table("Role", Schema = "Identity")]
 

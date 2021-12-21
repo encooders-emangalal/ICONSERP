@@ -1,8 +1,7 @@
-﻿using ICONSERP.Models.BaseModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ICONSERPAPI.Models.Models.Shared
+namespace ICONSERP.Models.Models
 {
     [Table("Country", Schema = "Core")]
     public class Country : BaseModel

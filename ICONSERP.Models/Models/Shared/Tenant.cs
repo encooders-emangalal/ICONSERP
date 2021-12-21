@@ -1,8 +1,8 @@
-﻿using ICONSERP.Models.BaseModel;
-using ICONSERPAPI.Models.Models.Identity;
+﻿ 
+using ICONSERP.Models.Models.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ICONSERPAPI.Models.Models.Shared
+namespace ICONSERP.Models.Models.Shared
 {
     [Table("Tenant", Schema = "Core")]
     public class Tenant : BaseModel

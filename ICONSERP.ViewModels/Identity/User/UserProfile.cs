@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ICONSERPAPI.Models.Models.Identity;
+using ICONSERP.Models.Models.Identity;
 
 namespace ICONSERP.ViewModels.Identity
 {

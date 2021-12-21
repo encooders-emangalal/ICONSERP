@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using ICONSERPAPI.Models.Models.Identity;
+using ICONSERP.Models.Models.Identity;
 
 namespace ICONSERP.ViewModels.Identity
 {

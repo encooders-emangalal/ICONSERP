@@ -1,11 +1,11 @@
-﻿using ICONSERP.Models.BaseModel;
+﻿ 
 using ICONSERP.Models.Models.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace ICONSERPAPI.Models.Models.Identity
+namespace ICONSERP.Models.Models.Identity
 {
     [Table("Resource", Schema = "Identity")]
 

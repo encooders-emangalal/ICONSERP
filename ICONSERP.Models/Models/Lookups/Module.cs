@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ICONSERP.Models.Models.Shared
+namespace ICONSERP.Models.Models.Lookups
 {
-    [Table("Proffession", Schema = "Core")]
-    public class Proffession : BaseModel
+    [Table("Module", Schema = "Core")]
+    public class Module:BaseModel
     {
         [Required(ErrorMessage = "Code is required")]
         public string Code { get; set; }

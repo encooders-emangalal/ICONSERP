@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using ICONSERP.Models;
-using ICONSERP.Models.BaseModel;
+ 
 using ICONSERP.Models.Models.Identity;
-using ICONSERPAPI.Models.Models.Identity;
+using ICONSERP.Models.Models.Identity;
 
-namespace ICONSERPAPI.Models.Identity
+namespace ICONSERP.Models.Identity
 {
     [Table("LogType", Schema = "Identity")]
 

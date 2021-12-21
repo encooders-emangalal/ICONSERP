@@ -2,7 +2,8 @@
 
 
 
-namespace ICONSERP.Models.BaseModel;
+namespace ICONSERP.Models;
+
 
 
 public class BaseModel
