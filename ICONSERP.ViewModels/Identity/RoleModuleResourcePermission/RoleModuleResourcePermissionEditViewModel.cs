@@ -7,12 +7,12 @@ namespace ICONSERP.ViewModels.Identity
 {
     public class RoleModuleResourcePermissionEditViewModel
     {
-        public long ID { get; set; }
+        public Guid ID { get; set; }
         [Required]
-        public long RoleID { get; set; }
+        public Guid RoleID { get; set; }
         [Required]
-        public long ModuleResourceID { get; set; }
+        public Guid ModuleResourceID { get; set; }
         [Required]
-        public long PermissionID { get; set; }
+        public Guid PermissionID { get; set; }
     }
 }

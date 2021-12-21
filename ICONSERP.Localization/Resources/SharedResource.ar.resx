@@ -120,4 +120,13 @@
   <data name="ErrorOccurred" xml:space="preserve">
     <value>حدث خطأ ما</value>
   </data>
+  <data name="SuccessfullyCreated" xml:space="preserve">
+    <value>تمت الاضافة بنجاح</value>
+  </data>
+  <data name="SuccessfullyDeleted" xml:space="preserve">
+    <value> تم المسح بنجاح</value>
+  </data>
+  <data name="SuccessfullyUpdated" xml:space="preserve">
+    <value>تم التعديل بنجاح </value>
+  </data>
 </root>

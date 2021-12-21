@@ -2,7 +2,7 @@
 {
     public class ResourceViewModel
     {
-        public long ID { get; set; }
+        public Guid ID { get; set; }
         public ResourceTypeViewModel ResourceType { get; set; }
         public ResourceViewModel ParentResource { get; set; }
         public string Code { get; set; }

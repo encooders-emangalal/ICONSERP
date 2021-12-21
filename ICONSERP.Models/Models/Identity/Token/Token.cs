@@ -14,7 +14,7 @@ namespace ICONSERP.Models.Models.Identity
         public virtual TokenType TokenType { get; set; }
         public long? TokenTypeID { get; set; }
         public virtual User User { get; set; }
-        public long UserID { get; set; }
+        public Guid UserID { get; set; }
         public string Code { get; set; }
         public string IP { get; set; }
         public string UserAgent { get; set; }

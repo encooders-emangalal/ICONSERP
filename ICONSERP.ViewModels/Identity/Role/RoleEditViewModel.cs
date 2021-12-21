@@ -8,7 +8,7 @@ namespace ICONSERP.ViewModels.Identity
         {
             RoleModuleResourcePermissions = new List<RoleModuleResourcePermissionEditViewModel>();
         }
-        public long ID { get; set; }
+        public Guid ID { get; set; }
         public string Code { get; set; }
         [Required]
         public string NameArabic { get; set; }

@@ -9,9 +9,9 @@ namespace ICONSERP.Models.Models.Identity
     public class TokenLog : BaseModel
     {
         public virtual Token Token { get; set; }
-        public long? TokenID { get; set; }
+        public Guid? TokenID { get; set; }
         public virtual LogType LogType { get; set; }
-        public long? LogTypeID { get; set; }
+        public Guid? LogTypeID { get; set; }
         public string IP { get; set; }
         public string UserAgent { get; set; }
         public string UserMachine { get; set; }

@@ -12,9 +12,9 @@ namespace ICONSERP.Models.Models.Identity
     public class Resource : BaseModel
     {
         public virtual ResourceType ResourceType { get; set; }
-        public long ResourceTypeID { get; set; }
+        public Guid ResourceTypeID { get; set; }
         public virtual Resource ParentResource { get; set; }
-        public long? ParentResourceID { get; set; }
+        public Guid? ParentResourceID { get; set; }
         public string Code { get; set; }
         public string NameArabic { get; set; }
         public string NameEnglish { get; set; }

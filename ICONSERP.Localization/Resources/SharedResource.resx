@@ -120,4 +120,7 @@
   <data name="ErrorOccurred" xml:space="preserve">
     <value>ErrorOccurred</value>
   </data>
+  <data name="SuccessfullyCreated" xml:space="preserve">
+    <value>SuccessfullyCreated</value>
+  </data>
 </root>

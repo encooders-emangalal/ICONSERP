@@ -68,5 +68,35 @@ namespace ICONSERP.Localization.Resources {
                 return ResourceManager.GetString("ErrorOccurred", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to SuccessfullyCreated.
+        /// </summary>
+        public static string SuccessfullyCreated
+        {
+            get
+            {
+                return ResourceManager.GetString("SuccessfullyCreated", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to SuccessfullyUpdated.
+        /// </summary>
+        public static string SuccessfullyUpdated
+        {
+            get
+            {
+                return ResourceManager.GetString("SuccessfullyUpdated", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to SuccessfullyDeleted.
+        /// </summary>
+        public static string SuccessfullyDeleted
+        {
+            get
+            {
+                return ResourceManager.GetString("SuccessfullyDeleted", resourceCulture);
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace ICONSERP.Models.Models.Identity
     public class ModuleResource : BaseModel
     {
         public virtual Module Module { get; set; }
-        public long ModuleID { get; set; }
+        public Guid ModuleID { get; set; }
         public virtual Resource Resource { get; set; }
         public long ResourceID { get; set; }
         public int Number { get; set; }

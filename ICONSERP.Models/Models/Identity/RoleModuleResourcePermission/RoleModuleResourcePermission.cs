@@ -12,10 +12,10 @@ namespace ICONSERP.Models.Models.Identity
     public class RoleModuleResourcePermission : BaseModel
     {
         public virtual Role Role { get; set; }
-        public long RoleID { get; set; }
+        public Guid RoleID { get; set; }
         public virtual ModuleResource ModuleResource { get; set; }
-        public long ModuleResourceID { get; set; }
+        public Guid ModuleResourceID { get; set; }
         public virtual Permission Permission { get; set; }
-        public long PermissionID { get; set; }
+        public Guid PermissionID { get; set; }
     }
 }
