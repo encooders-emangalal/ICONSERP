@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ICONSERP.Models.Models.Lookups
+namespace ICONSERP.Models.Models
 {
     [Table("UserStatus", Schema = "Core")]
     public class UserStatus:BaseModel

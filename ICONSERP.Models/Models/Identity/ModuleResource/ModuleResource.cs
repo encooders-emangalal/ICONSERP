@@ -11,7 +11,7 @@ namespace ICONSERP.Models.Models.Identity
         public virtual Module Module { get; set; }
         public Guid ModuleID { get; set; }
         public virtual Resource Resource { get; set; }
-        public long ResourceID { get; set; }
+        public Guid ResourceID { get; set; }
         public int Number { get; set; }
         public virtual ICollection<RoleModuleResourcePermission> RoleModuleResourcePermissions { get; set; }
     }

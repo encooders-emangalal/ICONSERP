@@ -18,7 +18,7 @@ namespace ICONSERP.Models.Models.Identity
             builder.Property(x => x.UserAgent).IsRequired().HasMaxLength(500);
             builder.Property(x => x.ExpirationDate).IsRequired();
             builder.Property(x => x.LoggedOutDate).IsRequired(false);
-            builder.Property(x => x.Active).IsRequired();
+            builder.Property(x => x.IsActive).IsRequired();
             builder.HasOne(x => x.TokenType).WithMany(x => x.Tokens).HasForeignKey(x => x.TokenTypeID).IsRequired(false);
             builder.HasOne(x => x.User).WithMany(x => x.Tokens).HasForeignKey(x => x.UserID).IsRequired();
         }
