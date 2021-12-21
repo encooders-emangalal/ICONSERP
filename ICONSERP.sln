@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICONSERP.API", "ICONSERP.API\ICONSERP.API.csproj", "{BFDEEAC1-5DDB-40BC-B61F-918EAB662B2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICONSERP.Data", "ICONSERP.Data\ICONSERP.Data.csproj", "{CB4A70DF-34BD-4FC9-9E37-11BE1F7CF497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICONSERP.Localization", "ICONSERP.Localization\ICONSERP.Localization.csproj", "{A7D6DD06-2B2C-4D3F-88E0-4F813C176DB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICONSERP.Models", "ICONSERP.Models\ICONSERP.Models.csproj", "{E5B9C80B-CD2F-42C8-91F2-5CA088EF4A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICONSERP.ViewModels", "ICONSERP.ViewModels\ICONSERP.ViewModels.csproj", "{992CF25C-A71C-45D1-9EC7-FE94BC98D05F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICONSERP.Services", "ICONSERP.Services\ICONSERP.Services.csproj", "{B72F0A9B-D2A6-4364-ACA8-C2F27C30356C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFDEEAC1-5DDB-40BC-B61F-918EAB662B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFDEEAC1-5DDB-40BC-B61F-918EAB662B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFDEEAC1-5DDB-40BC-B61F-918EAB662B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFDEEAC1-5DDB-40BC-B61F-918EAB662B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB4A70DF-34BD-4FC9-9E37-11BE1F7CF497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB4A70DF-34BD-4FC9-9E37-11BE1F7CF497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB4A70DF-34BD-4FC9-9E37-11BE1F7CF497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB4A70DF-34BD-4FC9-9E37-11BE1F7CF497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D6DD06-2B2C-4D3F-88E0-4F813C176DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D6DD06-2B2C-4D3F-88E0-4F813C176DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D6DD06-2B2C-4D3F-88E0-4F813C176DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D6DD06-2B2C-4D3F-88E0-4F813C176DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B9C80B-CD2F-42C8-91F2-5CA088EF4A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B9C80B-CD2F-42C8-91F2-5CA088EF4A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B9C80B-CD2F-42C8-91F2-5CA088EF4A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B9C80B-CD2F-42C8-91F2-5CA088EF4A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992CF25C-A71C-45D1-9EC7-FE94BC98D05F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992CF25C-A71C-45D1-9EC7-FE94BC98D05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992CF25C-A71C-45D1-9EC7-FE94BC98D05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992CF25C-A71C-45D1-9EC7-FE94BC98D05F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72F0A9B-D2A6-4364-ACA8-C2F27C30356C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72F0A9B-D2A6-4364-ACA8-C2F27C30356C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72F0A9B-D2A6-4364-ACA8-C2F27C30356C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72F0A9B-D2A6-4364-ACA8-C2F27C30356C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFE2BBFA-B25F-44A5-8176-28E71F6DA6E2}
+	EndGlobalSection
+EndGlobal
