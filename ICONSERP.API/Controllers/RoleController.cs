@@ -1,4 +1,5 @@
-﻿using ICONSERP.Localization.Resources;
+﻿using AutoMapper;
+using ICONSERP.Localization.Resources;
 using ICONSERP.Services;
 using ICONSERP.ViewModels.Identity;
 using ICONSERP.ViewModels.Shared;
@@ -12,11 +13,12 @@ namespace ICONSERP.API.Controllers
     {
         private ResultViewModel _resultViewModel;
         private readonly IRoleService _service;
-        public RoleController(IRoleService service)
+        protected IMapper _mapper;
+        public RoleController(IRoleService service, IMapper mapper)
         {
             _service = service;
             _resultViewModel = new ResultViewModel();
-
+            _mapper = mapper;
         }
 
         [HttpGet]

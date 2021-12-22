@@ -22,9 +22,10 @@ namespace ICONSERP.Data
             _context = context;
             _serviceProvider = serviceProvider;
         }
-        public UnitOfWork()
+        public UnitOfWork(EntitiesContext dbContext)
         {
-            _context = new EntitiesContext();
+            if (dbContext != null)
+                _context = dbContext;
         }
         public T Repository<T>() where T : class
 
@@ -69,7 +70,7 @@ namespace ICONSERP.Data
         }
 
         private Repository<User> userRepository;
-        public Repository<User> UserRepositoryOwner
+        public Repository<User> UserRepository
         {
             get => CreateRepository(ref userRepository);
         }
@@ -92,7 +93,7 @@ namespace ICONSERP.Data
         {
             if (field == null)
             {
-                var constructor = typeof(T).GetConstructor(new[] { typeof(EntitiesContext), typeof(int) });
+                var constructor = typeof(T).GetConstructor(new[] { typeof(EntitiesContext) });
                 if (constructor != null)
                 {
                     field = (T)constructor.Invoke(new object[] { _context });

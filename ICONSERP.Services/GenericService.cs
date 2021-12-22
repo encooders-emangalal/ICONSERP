@@ -14,11 +14,11 @@ namespace ICONSERP.Services
         protected UnitOfWork _unitOfWork;
         protected IRepository<TModel> _repository;
         protected IMapper _mapper;
-        public GenericService(UnitOfWork unitOfWork)
+        public GenericService(UnitOfWork unitOfWork, IMapper mapper)
         {
             this._unitOfWork = unitOfWork;
             _repository = unitOfWork.Repository<Repository<TModel>>();
-          
+            _mapper = mapper;
         }
         public virtual TEditViewModel Add(TEditViewModel model)
         {

@@ -8,22 +8,22 @@ namespace ICONSERP.ViewModels.Shared
         public object Data { get; set; }
         public string Message { get; set; }
         public bool Success { get; set; }
-        public bool Authorized { get; set; }
+        //public bool Authorized { get; set; }
 
         public ResultViewModel()
         {
             Data = null;
             Success = true;
             Message = string.Empty;
-            Authorized = true;
+            //Authorized = true;
         }
 
-        public ResultViewModel(object data, string message = "", bool success = true, bool authorized = true)
+        public ResultViewModel(object data, string message = "", bool success = true/*, bool authorized = true*/)
         {
             Data = data;
             Success = success;
             Message = message;
-            Authorized = authorized;
+            //Authorized = authorized;
         }
         public ResultViewModel Create(bool IsSucceeded, string message, object data = null)
         {

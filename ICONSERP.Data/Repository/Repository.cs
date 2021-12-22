@@ -103,9 +103,9 @@ namespace ICONSERP.Data.Repository
         public virtual void Remove(Guid id)
         {
             T entity = _dbSet.Where(x => !x.IsDeleted).FirstOrDefault(i => i.ID == id);
-            //entity.UpdatedBy = UserID;
+            //entity.DeletedBy = UserID;
             entity.IsDeleted = true;
-            entity.UpdatedDate = DateTime.Now;
+            entity.DeletedDate = DateTime.Now;
             _context.Entry<T>(entity).State = EntityState.Modified;
         }
         public virtual void Delete(Guid id)

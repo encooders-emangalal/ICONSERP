@@ -9,11 +9,7 @@ namespace ICONSERP.Data.Context
     {
         public EntitiesContext(DbContextOptions optionsBuilder) : base(optionsBuilder)
         {
-        }
-        public EntitiesContext()
-        {
-
-        }
+        }       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
         }

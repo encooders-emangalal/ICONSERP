@@ -9,7 +9,7 @@ namespace ICONSERP.Models;
 public class BaseModel
 { 
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public virtual Guid ID { get; set; }
+    public virtual Guid ID { get; set; } = Guid.NewGuid();
     public bool IsActive { get; set; }
     public bool IsDeleted { get; set; } = false;
     public DateTime CreatedDate { get; set; } = DateTime.Now;

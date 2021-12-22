@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ICONSERP.Data;
+using ICONSERP.Data.Context;
 using ICONSERP.Data.Extensions;
 using ICONSERP.Data.Repository;
 using ICONSERP.Models.Models.Identity;
@@ -13,10 +14,12 @@ namespace ICONSERP.Services
     public class RoleService : GenericService<Role, RoleEditViewModel, RoleViewModel>, IRoleService
     {
       
-        protected IMapper _mapper;       
-        public RoleService(UnitOfWork unitOfWork): base(unitOfWork)
+        protected IMapper _mapper;
+        protected IRepository<Role> _repository;     
+        public RoleService(UnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
-            _unitOfWork = new UnitOfWork();
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }        
         public PagingViewModel Get(string name = "", string orderBy = "ID", bool isAscending = false, int pageIndex = 1, int pageSize = 20)
         {
@@ -51,7 +54,7 @@ namespace ICONSERP.Services
         }
         public override RoleEditViewModel Add(RoleEditViewModel model)
         {
-            var obj = _mapper.Map<Role>(model);
+            var obj = _mapper.Map<Role>(model);           
             var attachedObj = _unitOfWork.RoleRepository.Add(obj);
             foreach (var item in model.RoleModuleResourcePermissions)
                 item.RoleID = obj.ID;

@@ -25,6 +25,7 @@ builder.Services.BuildServiceProvider();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IRoleService, RoleService>();
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 

@@ -9,11 +9,8 @@ namespace ICONSERP.ViewModels
         public RoleProfile()
         {
             CreateMap<RoleEditViewModel, Role>(MemberList.None).ForMember(i => i.RoleModuleResourcePermissions, opt => opt.Ignore());
-            CreateMap<Role, RoleViewModel>().AfterMap(
-                            (src, dest, c) =>
-                            {
-                            }
-                            );
+            CreateMap<Role, RoleViewModel>().AfterMap((src, dest, c) =>{});
+            CreateMap<Role, RoleEditViewModel>().AfterMap((src, dest, c) => { });
         }
     }
 }
