@@ -1,6 +1,9 @@
 ﻿using ICONSERP.Data.Context;
 using ICONSERP.Data.Repository;
+using ICONSERP.Models.Identity;
+using ICONSERP.Models.Models;
 using ICONSERP.Models.Models.Identity;
+using ICONSERP.Models.Models.Shared;
 
 namespace ICONSERP.Data
 {
@@ -63,10 +66,70 @@ namespace ICONSERP.Data
             _context.ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
         }
 
+        private Repository<LogType> logTypeRepository;
+        public Repository<LogType> LogTypeRepository
+        {
+            get => CreateRepository(ref logTypeRepository);
+        }
+
+        private Repository<Module> moduleRepository;
+        public Repository<Module> ModuleRepository
+        {
+            get => CreateRepository(ref moduleRepository);
+        }
+        private Repository<ModuleResource> moduleResourceRepository;
+        public Repository<ModuleResource> ModuleResourceRepository
+        {
+            get => CreateRepository(ref moduleResourceRepository);
+        }
+        private Repository<Permission> permissionRepository;
+        public Repository<Permission> PermissionRepository
+        {
+            get => CreateRepository(ref permissionRepository);
+        }
+
+        private Repository<Resource> resourceRepository;
+        public Repository<Resource> ResourceRepository
+        {
+            get => CreateRepository(ref resourceRepository);
+        }
+        private Repository<ResourceType> resourceTypeRepository;
+        public Repository<ResourceType> ResourceTypeRepository
+        {
+            get => CreateRepository(ref resourceTypeRepository);
+        }
+
+
         private Repository<Role> roleRepository;
         public Repository<Role> RoleRepository
         {
             get => CreateRepository(ref roleRepository);
+        }
+
+
+        private Repository<RoleModuleResourcePermission> roleModuleResourcePermissionRepository;
+        public Repository<RoleModuleResourcePermission> RoleModuleResourcePermissionRepository
+        {
+            get => CreateRepository(ref roleModuleResourcePermissionRepository);
+        }
+
+        private Repository<Token> tokenRepository;
+        public Repository<Token> TokenRepository
+        {
+            get => CreateRepository(ref tokenRepository);
+        }
+
+        private Repository<TokenLog> tokenLogRepository;
+        public Repository<TokenLog> TokenLogRepository
+        {
+            get => CreateRepository(ref tokenLogRepository);
+        }
+
+
+        private Repository<TokenType> tokenTypeRepository;
+        public Repository<TokenType> TokenTypeRepository
+        {
+            get => CreateRepository(ref tokenTypeRepository);
         }
 
         private Repository<User> userRepository;
@@ -74,20 +137,65 @@ namespace ICONSERP.Data
         {
             get => CreateRepository(ref userRepository);
         }
+
         private Repository<UserRole> userRoleRepository;
         public Repository<UserRole> UserRoleRepository
         { 
         get => CreateRepository(ref userRoleRepository);
         }
-        private Repository<RoleModuleResourcePermission> roleModuleResourcePermissionRepository;
-        public Repository<RoleModuleResourcePermission> RoleModuleResourcePermissionRepository
+
+
+        private Repository<ApplicationModule> applicationModuleRepository;
+        public Repository<ApplicationModule> ApplicationModuleRepository
         {
-            get => CreateRepository(ref roleModuleResourcePermissionRepository);
+            get => CreateRepository(ref applicationModuleRepository);
         }
 
+        private Repository<BillingCycle> billingCycleRepository;
+        public Repository<BillingCycle> BillingCycleRepository
+        {
+            get => CreateRepository(ref billingCycleRepository);
 
+        }
 
+        private Repository<Country> countryRepository;
+        public Repository<Country> CountryRepository
+        {
+            get => CreateRepository(ref countryRepository);
+        }
+        private Repository<Currency> currencyRepository;
+        public Repository<Currency> CurrencyRepository
+        {
+            get => CreateRepository(ref currencyRepository);
+        }
+        private Repository<Plan> planRepository;
+        public Repository<Plan> PlanRepository
+        {
+            get => CreateRepository(ref planRepository);
+        }
 
+        private Repository<Unit> unitRepository;
+        public Repository<Unit> UnitRepository
+        {
+            get => CreateRepository(ref unitRepository);
+        }
+        private Repository<UserStatus> userStatusRepository;
+        public Repository<UserStatus> UserStatusRepository
+        {
+            get => CreateRepository(ref userStatusRepository);
+        }
+
+        private Repository<Proffession> proffessionRepository;
+        public Repository<Proffession> ProffessionRepository
+        {
+            get => CreateRepository(ref proffessionRepository);
+        }
+
+        private Repository<Tenant> tenantRepository;
+        public Repository<Tenant> TenantRepository
+        {
+            get => CreateRepository(ref tenantRepository);
+        }
 
         private T CreateRepository<T>(ref T field) where T : class// Repository<BaseModel>
         {
