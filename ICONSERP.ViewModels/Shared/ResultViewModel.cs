@@ -27,7 +27,7 @@ namespace ICONSERP.ViewModels.Shared
         }
         public ResultViewModel Create(bool IsSucceeded, string message, object data = null)
         {
-            return new ResultViewModel() { Success = IsSucceeded, Message = message, Data = data, Authorized = HttpConfigs.IsAuthorized };
+            return new ResultViewModel() { Success = IsSucceeded, Message = message, Data = data/*, Authorized = HttpConfigs.IsAuthorized*/ };
         }
         public ResultViewModel Create(Exception exception)
         {

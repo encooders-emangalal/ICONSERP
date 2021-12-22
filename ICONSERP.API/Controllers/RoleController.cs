@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ICONSERP.API.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class RoleController : ControllerBase
     {
         private ResultViewModel _resultViewModel;

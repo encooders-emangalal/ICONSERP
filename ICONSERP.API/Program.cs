@@ -1,5 +1,7 @@
+using ICONSERP.Data;
 using ICONSERP.Data.Context;
 using ICONSERP.Data.Repository;
+using ICONSERP.Services;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,13 +15,19 @@ builder.Services.AddDbContext<EntitiesContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
-builder.Services.AddCors(cor => cor.AddDefaultPolicy(policy =>
- policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod().AllowCredentials()));
-
+builder.Services.AddTransient<RoleService>();
+builder.Services.AddTransient<UnitOfWork>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.BuildServiceProvider();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IRoleService, RoleService>();
+
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
