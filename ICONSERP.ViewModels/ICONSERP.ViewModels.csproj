@@ -15,4 +15,8 @@
     <ProjectReference Include="..\ICONSERP.Models\ICONSERP.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Lookups\" />
+  </ItemGroup>
+
 </Project>
