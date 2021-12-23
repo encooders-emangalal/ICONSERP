@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using ICONSERP.Localization.Resources;
-using ICONSERP.Services.Interfaces;
+using ICONSERP.Services;
 using ICONSERP.ViewModels.Identity;
+using ICONSERP.ViewModels.Lookups.BillingCycle;
 using ICONSERP.ViewModels.Shared;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,15 +10,12 @@ namespace ICONSERP.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class BillingCycleController : Controller
+    public class BillingCycleController : ControllerBase
     {
-
         private ResultViewModel _resultViewModel;
-        private readonly BillingCycleController _service;
+        private readonly IBillingCycleService _service;
         protected IMapper _mapper;
-
-
-        public BillingCycleController(BillingCycleController service, IMapper mapper)
+        public BillingCycleController(IBillingCycleService service, IMapper mapper)
         {
             _service = service;
             _resultViewModel = new ResultViewModel();
@@ -90,7 +88,7 @@ namespace ICONSERP.API.Controllers
 
         [HttpPost]
         [Route("Post")]
-        public ResultViewModel Post([FromBody] RoleEditViewModel viewModel)
+        public ResultViewModel Post([FromBody] CountryEditViewModel viewModel)
         {
             try
             {
@@ -105,7 +103,7 @@ namespace ICONSERP.API.Controllers
 
         [HttpPut]
         [Route("Put")]
-        public ResultViewModel Put([FromBody] RoleEditViewModel viewModel)
+        public ResultViewModel Put([FromBody] CountryEditViewModel viewModel)
         {
             try
             {
@@ -136,4 +134,3 @@ namespace ICONSERP.API.Controllers
         }
     }
 }
-

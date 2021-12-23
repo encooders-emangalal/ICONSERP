@@ -2,10 +2,7 @@
 using ICONSERP.Data;
 using ICONSERP.Data.Repository;
 using ICONSERP.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 
 namespace ICONSERP.Services
 {

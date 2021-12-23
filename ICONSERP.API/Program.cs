@@ -18,12 +18,15 @@ builder.Services.AddDbContext<EntitiesContext>(options =>
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddTransient<RoleService>();
+builder.Services.AddTransient<BillingCycleService>();
 builder.Services.AddTransient<UnitOfWork>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.BuildServiceProvider();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<IBillingCycleService, BillingCycleService>();
+
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

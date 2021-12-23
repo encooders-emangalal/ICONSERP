@@ -22,7 +22,7 @@ namespace ICONSERP.Data.Context
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<Resource> Resources { get; set; }
         public DbSet<ResourceType> ResourceTypes { get; set; }
-        public DbSet<Role> Roles { get; set; }
+        public DbSet<Models.Models.Identity.Role> Roles { get; set; }
         public DbSet<RoleModuleResourcePermission> RoleModuleResourcePermissions { get; set; }
         public DbSet<Token> Tokens { get; set; }
         public DbSet<TokenLog> TokenLogs { get; set; }
@@ -32,7 +32,7 @@ namespace ICONSERP.Data.Context
     
        
         //lookups
-        public DbSet<BillingCycle> BillingCycles { get; set; }
+        public DbSet<Models.Models.BillingCycle> BillingCycles { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Currency> Currencies { get; set; }
         public DbSet<ApplicationModule> ApplicationModules { get; set; }

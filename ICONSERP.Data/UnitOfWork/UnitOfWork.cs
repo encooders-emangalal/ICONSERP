@@ -100,8 +100,8 @@ namespace ICONSERP.Data
         }
 
 
-        private Repository<Role> roleRepository;
-        public Repository<Role> RoleRepository
+        private Repository<Models.Models.Identity.Role> roleRepository;
+        public Repository<Models.Models.Identity.Role> RoleRepository
         {
             get => CreateRepository(ref roleRepository);
         }
@@ -151,8 +151,8 @@ namespace ICONSERP.Data
             get => CreateRepository(ref applicationModuleRepository);
         }
 
-        private Repository<BillingCycle> billingCycleRepository;
-        public Repository<BillingCycle> BillingCycleRepository
+        private Repository<Models.Models.BillingCycle> billingCycleRepository;
+        public Repository<Models.Models.BillingCycle> BillingCycleRepository
         {
             get => CreateRepository(ref billingCycleRepository);
 

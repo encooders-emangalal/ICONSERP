@@ -8,11 +8,7 @@ namespace ICONSERP.ViewModels.Identity
         public PermissionProfile()
         {
             CreateMap<PermissionEditViewModel, Permission>(MemberList.None);
-            CreateMap<Permission, ModuleViewModel>().AfterMap(
-                            (src, dest, c) =>
-                            {
-                            }
-                            );
+            CreateMap<Permission, ModuleViewModel>().AfterMap((src, dest, c) =>{});
         }
     }
 }
