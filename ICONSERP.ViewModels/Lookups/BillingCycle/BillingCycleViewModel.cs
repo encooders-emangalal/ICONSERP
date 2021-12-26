@@ -1,6 +1,6 @@
 ﻿namespace ICONSERP.ViewModels.Lookups.BillingCycle
 {
-    public class CountryViewModel
+    public class BillingCycleViewModel
     {
        
      

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ICONSERP.Localization.Resources;
-using ICONSERP.Services;
-using ICONSERP.ViewModels.Identity;
+using ICONSERP.Services.Interfaces;
+using ICONSERP.ViewModels.Lookups.ApplicationModule;
 using ICONSERP.ViewModels.Shared;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,12 +9,12 @@ namespace ICONSERP.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RoleController : BaseController
+    public class ApplicationModuleController : ControllerBase
     {
         private ResultViewModel _resultViewModel;
-        private readonly IRoleService _service;
+        private readonly IApplicationModuleService _service;
         protected IMapper _mapper;
-        public RoleController(IRoleService service, IMapper mapper)
+        public ApplicationModuleController(IApplicationModuleService service, IMapper mapper)
         {
             _service = service;
             _resultViewModel = new ResultViewModel();
@@ -31,7 +31,7 @@ namespace ICONSERP.API.Controllers
             }
             catch (Exception ex)
             {
-               _resultViewModel =  _resultViewModel.Create(false, ex.Message);
+                _resultViewModel = _resultViewModel.Create(false, ex.Message);
             }
             return _resultViewModel;
 
@@ -48,7 +48,7 @@ namespace ICONSERP.API.Controllers
             }
             catch (Exception ex)
             {
-               _resultViewModel =  _resultViewModel.Create(false, ex.Message);
+                _resultViewModel = _resultViewModel.Create(false, ex.Message);
             }
             return _resultViewModel;
         }
@@ -64,7 +64,7 @@ namespace ICONSERP.API.Controllers
             }
             catch (Exception ex)
             {
-               _resultViewModel =  _resultViewModel.Create(false, ex.Message);
+                _resultViewModel = _resultViewModel.Create(false, ex.Message);
             }
             return _resultViewModel;
         }
@@ -80,39 +80,37 @@ namespace ICONSERP.API.Controllers
             }
             catch (Exception ex)
             {
-               _resultViewModel =  _resultViewModel.Create(false, ex.Message);
+                _resultViewModel = _resultViewModel.Create(false, ex.Message);
             }
             return _resultViewModel;
         }
 
         [HttpPost]
         [Route("Post")]
-        public ResultViewModel Post([FromBody] RoleEditViewModel viewModel)
+        public ResultViewModel Post([FromBody] ApplicationModuleEditViewModel viewModel)
         {
             try
             {
-                if (IsModelStateValid())
-                    _resultViewModel = _resultViewModel.Create(true, SharedResource.SuccessfullyCreated, _service.Add(viewModel));
+                _resultViewModel = _resultViewModel.Create(true, SharedResource.SuccessfullyCreated, _service.Add(viewModel));
             }
             catch (Exception ex)
             {
-               _resultViewModel =  _resultViewModel.Create(false, ex.Message);
+                _resultViewModel = _resultViewModel.Create(false, ex.Message);
             }
             return _resultViewModel;
         }
 
         [HttpPut]
         [Route("Put")]
-        public ResultViewModel Put([FromBody] RoleEditViewModel viewModel)
+        public ResultViewModel Put([FromBody] ApplicationModuleEditViewModel viewModel)
         {
             try
             {
-                if (IsModelStateValid())
-                    _resultViewModel = _resultViewModel.Create(true, SharedResource.SuccessfullyUpdated, _service.Edit(viewModel));
+                _resultViewModel = _resultViewModel.Create(true, SharedResource.SuccessfullyUpdated, _service.Edit(viewModel));
             }
             catch (Exception ex)
             {
-               _resultViewModel =  _resultViewModel.Create(false, ex.Message);
+                _resultViewModel = _resultViewModel.Create(false, ex.Message);
             }
             return _resultViewModel;
         }
@@ -129,7 +127,7 @@ namespace ICONSERP.API.Controllers
             }
             catch (Exception ex)
             {
-               _resultViewModel =  _resultViewModel.Create(false, ex.Message);
+                _resultViewModel = _resultViewModel.Create(false, ex.Message);
             }
             return _resultViewModel;
         }

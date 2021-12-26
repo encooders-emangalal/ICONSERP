@@ -1,11 +1,11 @@
-﻿namespace ICONSERP.ViewModels.Lookups.BillingCycle
+﻿namespace ICONSERP.ViewModels.Lookups
 {
     public class CountryViewModel
     {
-       
-     
-        public string NameArabic { get; set; }
-        public string NameEnglish { get; set; }
-        public int DisplayOrder { get; set; }
+        public Guid ID { get; set; }
+
+        public string? Code { get; set; }
+        public string? NameArabic { get; set; }
+        public string? NameEnglish { get; set; }
     }
 }

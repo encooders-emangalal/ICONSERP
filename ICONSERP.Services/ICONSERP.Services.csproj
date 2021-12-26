@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ICONSERP.Data\ICONSERP.Data.csproj" />
+    <ProjectReference Include="..\ICONSERP.Utilities\ICONSERP.Utilities.csproj" />
     <ProjectReference Include="..\ICONSERP.ViewModels\ICONSERP.ViewModels.csproj" />
   </ItemGroup>
 

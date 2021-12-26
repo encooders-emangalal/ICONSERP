@@ -4,13 +4,13 @@ using ICONSERP.Models.Models;
 
 namespace ICONSERP.ViewModels
 {
-    public class CountryCycleProfile : Profile
+    public class BillingCycleCycleProfile : Profile
     {
-        public CountryCycleProfile()
+        public BillingCycleCycleProfile()
         {
-            CreateMap<CountryEditViewModel, BillingCycle>(MemberList.None);
-            CreateMap<BillingCycle, CountryViewModel>().AfterMap((src, dest, c) => { });
-            CreateMap<BillingCycle, CountryEditViewModel>().AfterMap((src, dest, c) => { });
+            CreateMap<BillingCycleEditViewModel, BillingCycle>(MemberList.None);
+            CreateMap<BillingCycle, BillingCycleViewModel>().AfterMap((src, dest, c) => { });
+            CreateMap<BillingCycle, BillingCycleEditViewModel>().AfterMap((src, dest, c) => { });
         }
     }
 }

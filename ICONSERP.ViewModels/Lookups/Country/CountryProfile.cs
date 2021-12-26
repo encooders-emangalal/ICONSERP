@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using ICONSERP.ViewModels.Lookups.BillingCycle;
 using ICONSERP.Models.Models;
+using ICONSERP.ViewModels.Lookups;
 
 namespace ICONSERP.ViewModels
 {
-    public class CountryProfile : Profile
+    public class CountryProfile:Profile
     {
         public CountryProfile()
         {
@@ -12,5 +12,6 @@ namespace ICONSERP.ViewModels
             CreateMap<Country, CountryViewModel>().AfterMap((src, dest, c) => { });
             CreateMap<Country, CountryEditViewModel>().AfterMap((src, dest, c) => { });
         }
+
     }
 }

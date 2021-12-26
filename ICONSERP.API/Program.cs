@@ -2,6 +2,8 @@ using ICONSERP.Data;
 using ICONSERP.Data.Context;
 using ICONSERP.Data.Repository;
 using ICONSERP.Services;
+using ICONSERP.Services.Interfaces;
+using ICONSERP.Services.Services;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +21,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddTransient<RoleService>();
 builder.Services.AddTransient<BillingCycleService>();
+builder.Services.AddTransient<ApplicationModuleService>();
+builder.Services.AddTransient<CountryService>();
 builder.Services.AddTransient<UnitOfWork>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
@@ -26,6 +30,9 @@ builder.Services.BuildServiceProvider();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IBillingCycleService, BillingCycleService>();
+builder.Services.AddScoped<IApplicationModuleService, ApplicationModuleService>();
+builder.Services.AddScoped<ICountryService, CountryService>();
+
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

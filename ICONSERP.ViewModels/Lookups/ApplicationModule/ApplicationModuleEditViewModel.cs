@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ICONSERP.ViewModels.Lookups
+namespace ICONSERP.ViewModels.Lookups.ApplicationModule
 {
-    public class CountryEditViewModel
+    public class ApplicationModuleEditViewModel
     {
         public Guid ID { get; set; }
-
         public string? Code { get; set; }
         [Required]
         public string? NameArabic { get; set; }
